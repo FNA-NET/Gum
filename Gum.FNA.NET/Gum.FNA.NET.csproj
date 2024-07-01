@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>netstandard2.0;net8.0;net8.0-windows;net8.0-android;net8.0-ios</TargetFrameworks>
+        <DefineConstants>$(DefineConstants)TRACE;FNA;XNA4</DefineConstants>
+		<GenerateDocumentationFile>false</GenerateDocumentationFile>
+	</PropertyGroup>
+
+    <PropertyGroup Condition="'$(TargetFramework)' != 'netstandard2.0'">
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\FlatRedBall\Engines\Forms\FlatRedBall.Forms\StateInterpolation\StateInterpolation.FNA.NET\StateInterpolation.FNA.NET.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
+    </ItemGroup>
+
+    <Import Project="..\GumCoreShared.projitems" Label="Shared" />
+    <Import Project="..\..\FlatRedBall\FRBDK\Glue\GumPlugin\GumPlugin\GumCoreShared.FlatRedBall.projitems" Label="Shared" />
+</Project>

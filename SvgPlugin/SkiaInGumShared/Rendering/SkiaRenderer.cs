@@ -31,10 +31,10 @@ namespace SkiaMonoGameRendering
 
         public static int RenderableCount { get { return _renderables.Count - _renderablesToRemove.Count; } }
 
-        static readonly List<ISkiaRenderable> _renderables = new();
-        static readonly List<ISkiaRenderable> _renderablesToRemove = new();
-        static readonly Dictionary<ISkiaRenderable, SkiaRenderableInfo> _renderableInfos = new();
-        static readonly List<SkiaRenderableInfo> _renderableInfosToClear = new();
+        static readonly List<ISkiaRenderable> _renderables = new List<ISkiaRenderable>();
+        static readonly List<ISkiaRenderable> _renderablesToRemove = new List<ISkiaRenderable>();
+        static readonly Dictionary<ISkiaRenderable, SkiaRenderableInfo> _renderableInfos = new Dictionary<ISkiaRenderable, SkiaRenderableInfo>();
+        static readonly List<SkiaRenderableInfo> _renderableInfosToClear = new List<SkiaRenderableInfo>();
 
         /// <summary>
         /// Checks if a renderable is being managed by this renderer.

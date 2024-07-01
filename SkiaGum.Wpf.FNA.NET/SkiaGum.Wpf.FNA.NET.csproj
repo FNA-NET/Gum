@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+
+	<PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <AssemblyName>SkiaGum.Wpf.Net6</AssemblyName>
+    <UseWPF>true</UseWPF>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\SkiaGum.Wpf\GumSKElement.cs" Link="GumSKElement.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SkiaSharp.Views.WPF" Version="2.88.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SkiaGum.FNA.NET\SkiaGum.FNA.NET.csproj" />
+  </ItemGroup>
+
+</Project>
